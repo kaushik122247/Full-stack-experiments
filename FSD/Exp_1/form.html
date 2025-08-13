@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-weight: 600;
+            margin-top: 10px;
+            display: block;
+            color: #34495e;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin-bottom: 20px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            margin-right: 15px;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📄 Student Feedback Form</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Enter your age" required>
+
+            <label>Rate your FSD session (1 to 5):</label>
+            <div class="radio-group">
+                <label><input type="radio" name="rating"> 1</label>
+                <label><input type="radio" name="rating"> 2</label>
+                <label><input type="radio" name="rating"> 3</label>
+                <label><input type="radio" name="rating"> 4</label>
+                <label><input type="radio" name="rating"> 5</label>
+            </div>
+
+            <label>Select your courses:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="courses"> HTML</label>
+                <label><input type="checkbox" name="courses"> CSS</label>
+                <label><input type="checkbox" name="courses"> JavaScript</label>
+                <label><input type="checkbox" name="courses"> React JS</label>
+            </div>
+
+            <label for="department">Select your Department:</label>
+            <select id="department" required>
+                <option value="">-- Select Department --</option>
+                <option value="aiml">AIML</option>
+                <option value="cse">CSE</option>
+                <option value="it">IT</option>
+                <option value="mbbs">MBBS</option>
+            </select>
+
+            <input type="submit" value="Submit Feedback">
+        </form>
+    </div>
+</body>
+</html>
